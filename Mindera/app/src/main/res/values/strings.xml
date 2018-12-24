@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Mindera</string>
+    <string name="tab_text_1">Events</string>
+    <string name="tab_text_2">Vacancies</string>
+    <string name="action_search">Search</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>
