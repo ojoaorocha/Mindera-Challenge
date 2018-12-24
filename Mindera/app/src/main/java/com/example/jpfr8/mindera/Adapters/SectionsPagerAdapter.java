@@ -1,8 +1,11 @@
-package com.example.jpfr8.mindera;
+package com.example.jpfr8.mindera.Adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import com.example.jpfr8.mindera.Fragments.EventsFragment;
+import com.example.jpfr8.mindera.Fragments.VacanciesFragment;
 
 /**
  * A {@link FragmentPagerAdapter} that returns a fragment corresponding to

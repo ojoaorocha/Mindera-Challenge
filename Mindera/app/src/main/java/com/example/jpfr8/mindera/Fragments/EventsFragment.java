@@ -1,11 +1,12 @@
-package com.example.jpfr8.mindera;
+package com.example.jpfr8.mindera.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+
+import com.example.jpfr8.mindera.R;
 
 /**
  * A placeholder fragment containing a simple view.

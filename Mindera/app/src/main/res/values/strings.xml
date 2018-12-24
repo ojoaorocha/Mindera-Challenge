@@ -6,4 +6,7 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <string name="mindera">Mindera</string>
 </resources>
