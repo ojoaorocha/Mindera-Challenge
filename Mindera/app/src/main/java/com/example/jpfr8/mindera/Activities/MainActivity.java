@@ -6,6 +6,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.FragmentPagerAdapter;
@@ -15,10 +17,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.jpfr8.mindera.Adapters.OpenDaysAdapter;
 import com.example.jpfr8.mindera.Model.GraduateProgram;
 import com.example.jpfr8.mindera.Model.OpenDay;
 import com.example.jpfr8.mindera.R;
 import com.example.jpfr8.mindera.Adapters.SectionsPagerAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initData();
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
@@ -72,11 +76,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //drawer menu
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout,R.string.open,R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+//        //Recyclerview
+//        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+//        OpenDaysAdapter adapter = new OpenDaysAdapter(getOpenDays());
+//        recyclerView.setAdapter(adapter);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
 
@@ -108,18 +119,21 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void initData(){
-        OpenDay day1 = new OpenDay("Day 1");
-        OpenDay day2 = new OpenDay("Day 2");
-        OpenDay day3 = new OpenDay("Day 3");
-        OpenDay day4 = new OpenDay("Day 4");
-        OpenDay day5 = new OpenDay("Day 5");
-
+    public List<GraduateProgram> getGraduateProgram(){
+        List<GraduateProgram> graduateProgramList = new ArrayList<>();
         GraduateProgram program1 = new GraduateProgram("Program 1");
         GraduateProgram program2 = new GraduateProgram("Program 2");
         GraduateProgram program3 = new GraduateProgram("Program 3");
         GraduateProgram program4 = new GraduateProgram("Program 4");
         GraduateProgram program5 = new GraduateProgram("Program 5");
+
+        graduateProgramList.add(program1);
+        graduateProgramList.add(program2);
+        graduateProgramList.add(program3);
+        graduateProgramList.add(program4);
+        graduateProgramList.add(program5);
+
+        return graduateProgramList;
     }
 
 

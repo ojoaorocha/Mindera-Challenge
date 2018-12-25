@@ -25,4 +25,8 @@ public class OpenDay {
     public List<Event> getEventList(){
         return this.eventList;
     }
+
+    public String toString(){
+        return getName();
+    }
 }
