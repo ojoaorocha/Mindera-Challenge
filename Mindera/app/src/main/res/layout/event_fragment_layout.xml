@@ -45,9 +45,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/open_day" />
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="@string/open_day"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -65,9 +68,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/graduate_program" />
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="@string/graduate_program"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"/>
             </LinearLayout>
 
             <LinearLayout

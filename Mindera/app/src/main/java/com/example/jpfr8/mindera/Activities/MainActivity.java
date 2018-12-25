@@ -15,6 +15,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.jpfr8.mindera.Model.GraduateProgram;
+import com.example.jpfr8.mindera.Model.OpenDay;
 import com.example.jpfr8.mindera.R;
 import com.example.jpfr8.mindera.Adapters.SectionsPagerAdapter;
 
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        initData();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -102,6 +106,20 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void initData(){
+        OpenDay day1 = new OpenDay("Day 1");
+        OpenDay day2 = new OpenDay("Day 2");
+        OpenDay day3 = new OpenDay("Day 3");
+        OpenDay day4 = new OpenDay("Day 4");
+        OpenDay day5 = new OpenDay("Day 5");
+
+        GraduateProgram program1 = new GraduateProgram("Program 1");
+        GraduateProgram program2 = new GraduateProgram("Program 2");
+        GraduateProgram program3 = new GraduateProgram("Program 3");
+        GraduateProgram program4 = new GraduateProgram("Program 4");
+        GraduateProgram program5 = new GraduateProgram("Program 5");
     }
 
 

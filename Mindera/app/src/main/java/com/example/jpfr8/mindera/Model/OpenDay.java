@@ -18,6 +18,10 @@ public class OpenDay {
         this.eventList.add(new Event("List 5"));
     }
 
+    public String getName(){
+        return this.name;
+    }
+
     public List<Event> getEventList(){
         return this.eventList;
     }
