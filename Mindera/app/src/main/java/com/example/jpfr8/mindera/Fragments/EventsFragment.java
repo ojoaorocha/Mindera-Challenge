@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.jpfr8.mindera.Adapters.GraduateProgramsAdapter;
 import com.example.jpfr8.mindera.Adapters.OpenDaysAdapter;
 import com.example.jpfr8.mindera.Model.GraduateProgram;
 import com.example.jpfr8.mindera.Model.OpenDay;
@@ -28,7 +29,12 @@ public class EventsFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+    private RecyclerView.LayoutManager mLayoutManager2;
     private List<OpenDay> openDayList;
+    private List<GraduateProgram> graduateProgramList;
+
+    private RecyclerView mRecyclerView2;
+
 
     public EventsFragment() {
     }
@@ -52,20 +58,25 @@ public class EventsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.event_fragment_layout, container, false);
 
         this.openDayList = getOpenDays();
+        this.graduateProgramList = getGraduateProgram();
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
-//        mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new OpenDaysAdapter(openDayList);
         mRecyclerView.setAdapter(mAdapter);
 
+        mRecyclerView2 = (RecyclerView) rootView.findViewById(R.id.recycler_view2);
+        mLayoutManager2 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerView2.setLayoutManager(mLayoutManager2);
+        mAdapter = new GraduateProgramsAdapter(graduateProgramList);
+        mRecyclerView2.setAdapter(mAdapter);
 
         return rootView;
     }
 
 
-    public List<OpenDay> getOpenDays(){
+    private List<OpenDay> getOpenDays(){
         List<OpenDay> openDayList = new ArrayList<>();
         OpenDay day1 = new OpenDay("Day 1");
         OpenDay day2 = new OpenDay("Day 2");
@@ -80,5 +91,22 @@ public class EventsFragment extends Fragment {
         openDayList.add(day5);
 
         return openDayList;
+    }
+
+    private List<GraduateProgram> getGraduateProgram(){
+        List<GraduateProgram> graduateProgramList = new ArrayList<>();
+        GraduateProgram program1 = new GraduateProgram("Program 1");
+        GraduateProgram program2 = new GraduateProgram("Program 2");
+        GraduateProgram program3 = new GraduateProgram("Program 3");
+        GraduateProgram program4 = new GraduateProgram("Program 4");
+        GraduateProgram program5 = new GraduateProgram("Program 5");
+
+        graduateProgramList.add(program1);
+        graduateProgramList.add(program2);
+        graduateProgramList.add(program3);
+        graduateProgramList.add(program4);
+        graduateProgramList.add(program5);
+
+        return graduateProgramList;
     }
 }

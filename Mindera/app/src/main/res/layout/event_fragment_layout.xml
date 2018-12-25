@@ -86,7 +86,13 @@
                 android:id="@+id/graduateProgramListLayout"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
         </LinearLayout>
     </android.support.constraint.ConstraintLayout>
 

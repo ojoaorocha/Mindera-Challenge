@@ -119,24 +119,4 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public List<GraduateProgram> getGraduateProgram(){
-        List<GraduateProgram> graduateProgramList = new ArrayList<>();
-        GraduateProgram program1 = new GraduateProgram("Program 1");
-        GraduateProgram program2 = new GraduateProgram("Program 2");
-        GraduateProgram program3 = new GraduateProgram("Program 3");
-        GraduateProgram program4 = new GraduateProgram("Program 4");
-        GraduateProgram program5 = new GraduateProgram("Program 5");
-
-        graduateProgramList.add(program1);
-        graduateProgramList.add(program2);
-        graduateProgramList.add(program3);
-        graduateProgramList.add(program4);
-        graduateProgramList.add(program5);
-
-        return graduateProgramList;
-    }
-
-
-
-
 }
