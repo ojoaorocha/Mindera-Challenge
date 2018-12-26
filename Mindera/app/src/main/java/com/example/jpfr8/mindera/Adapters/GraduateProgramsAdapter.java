@@ -19,7 +19,8 @@ public class GraduateProgramsAdapter extends RecyclerView.Adapter<GraduateProgra
     private Context context;
     private List<GraduateProgram> items;
 
-    public GraduateProgramsAdapter(List<GraduateProgram> items) {
+    public GraduateProgramsAdapter(Context context, List<GraduateProgram> items) {
+        this.context = context;
         this.items = items;
     }
 

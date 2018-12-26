@@ -1,9 +1,10 @@
 package com.example.jpfr8.mindera.Model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GraduateProgram {
+public class GraduateProgram implements Serializable {
 
     private List<String> graduateProgramList;
     private String name;

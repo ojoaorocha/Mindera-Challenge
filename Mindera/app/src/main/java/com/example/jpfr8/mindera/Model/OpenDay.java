@@ -1,9 +1,10 @@
 package com.example.jpfr8.mindera.Model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OpenDay {
+public class OpenDay implements Serializable {
 
     private List<Event>  eventList;
     private String name;

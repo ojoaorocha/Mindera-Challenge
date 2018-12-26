@@ -19,6 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Activities.OpenDayActivity"
+            android:label="@string/title_activity_open_day"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.EventActivity"
+            android:label="@string/title_activity_event"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

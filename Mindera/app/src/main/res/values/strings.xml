@@ -10,4 +10,10 @@
     <string name="about">About</string>
     <string name="open_day">Open Day \'18</string>
     <string name="graduate_program">Graduate Program</string>
+    <string name="title_activity_open_day">OpenDayActivity</string>
+    <string name="title_activity_day">DayActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_event">EventActivity</string>
 </resources>

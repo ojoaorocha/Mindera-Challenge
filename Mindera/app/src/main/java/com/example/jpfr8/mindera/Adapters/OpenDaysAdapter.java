@@ -1,6 +1,7 @@
 package com.example.jpfr8.mindera.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.jpfr8.mindera.Activities.OpenDayActivity;
 import com.example.jpfr8.mindera.Model.OpenDay;
 import com.example.jpfr8.mindera.R;
 
@@ -19,7 +21,8 @@ public class OpenDaysAdapter extends RecyclerView.Adapter<OpenDaysAdapter.OpenDa
     private Context context;
     private List<OpenDay> items;
 
-    public OpenDaysAdapter(List<OpenDay> items){
+    public OpenDaysAdapter(Context context, List<OpenDay> items){
+        this.context = context;
         this.items = items;
     }
 
@@ -33,7 +36,16 @@ public class OpenDaysAdapter extends RecyclerView.Adapter<OpenDaysAdapter.OpenDa
 
     @Override
     public void onBindViewHolder(@NonNull OpenDaysViewHolder openDaysViewHolder, int i) {
-        openDaysViewHolder.textView.setText(items.get(i).getName());
+        final OpenDay openDay = items.get(i);
+        openDaysViewHolder.textView.setText(openDay.getName());
+        openDaysViewHolder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, OpenDayActivity.class);
+                intent.putExtra("openDay", openDay);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

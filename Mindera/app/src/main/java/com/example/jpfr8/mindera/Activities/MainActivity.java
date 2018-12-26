@@ -83,11 +83,6 @@ public class MainActivity extends AppCompatActivity {
         mToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-//        //Recyclerview
-//        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-//        OpenDaysAdapter adapter = new OpenDaysAdapter(getOpenDays());
-//        recyclerView.setAdapter(adapter);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
 

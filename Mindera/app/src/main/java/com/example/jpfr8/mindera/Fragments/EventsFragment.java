@@ -63,13 +63,13 @@ public class EventsFragment extends Fragment {
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
         mLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new OpenDaysAdapter(openDayList);
+        mAdapter = new OpenDaysAdapter(getContext(), openDayList);
         mRecyclerView.setAdapter(mAdapter);
 
         mRecyclerView2 = (RecyclerView) rootView.findViewById(R.id.recycler_view2);
         mLayoutManager2 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView2.setLayoutManager(mLayoutManager2);
-        mAdapter = new GraduateProgramsAdapter(graduateProgramList);
+        mAdapter = new GraduateProgramsAdapter(getContext(), graduateProgramList);
         mRecyclerView2.setAdapter(mAdapter);
 
         return rootView;
