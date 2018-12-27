@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.jpfr8.mindera.Model.GraduateProgram;
 import com.example.jpfr8.mindera.R;
@@ -27,7 +28,6 @@ public class GraduateProgramsAdapter extends RecyclerView.Adapter<GraduateProgra
     @NonNull
     @Override
     public GraduateProgramHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-
         View openDaysView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_layout, viewGroup, false);
         GraduateProgramsAdapter.GraduateProgramHolder holder = new GraduateProgramHolder(openDaysView);
 
@@ -37,6 +37,12 @@ public class GraduateProgramsAdapter extends RecyclerView.Adapter<GraduateProgra
     @Override
     public void onBindViewHolder(@NonNull GraduateProgramHolder graduateProgramHolder, int i) {
         graduateProgramHolder.textView.setText(items.get(i).getName());
+        graduateProgramHolder.cardView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context,"No implemented", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
