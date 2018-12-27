@@ -55,6 +55,8 @@ public class EventActivity extends AppCompatActivity {
 
         });
 
+        getSupportActionBar().setTitle(this.event.getName());
+
     }
 
     @Override
