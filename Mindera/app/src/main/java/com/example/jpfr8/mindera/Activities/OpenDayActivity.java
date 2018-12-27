@@ -57,7 +57,6 @@ public class OpenDayActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle(OPEN_DAY + openDay.getName());
 
-
     }
 
     @Override

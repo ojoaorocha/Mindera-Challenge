@@ -9,7 +9,7 @@
     android:clickable="true"
     android:focusableInTouchMode="true"
     tools:context=".Activities.MainActivity"
-    >
+    android:focusable="true">
 
     <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -33,7 +33,6 @@
                 android:layout_height="?attr/actionBarSize"
                 android:layout_weight="1"
                 android:background="@drawable/textlines"
-                app:layout_scrollFlags="scroll|enterAlways"
                 app:popupTheme="@style/AppTheme.PopupOverlay"
                 app:title="@string/app_name">
 
